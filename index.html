@@ -8,23 +8,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.13.4/chess.js"></script>
 </head>
 <body>
-    <div class="chess-container">
-        <div class="chess-board" id="board"></div>
-        <div class="side-panel">
+    <div class="container">
+        <div class="board" id="board"></div>
+        <div class="controls">
             <div class="game-info">
-                <div class="clock white-clock">
-                    <span>White: </span>
-                    <span id="white-time">10:00</span>
+                <h2 id="game-status">White's Turn</h2>
+                <div class="difficulty-select">
+                    <label>AI Difficulty:</label>
+                    <select id="ai-difficulty">
+                        <option value="1">Easy</option>
+                        <option value="3">Medium</option>
+                        <option value="5">Hard</option>
+                    </select>
                 </div>
-                <div class="clock black-clock">
-                    <span>Black: </span>
-                    <span id="black-time">10:00</span>
-                </div>
-                <div class="game-status" id="game-status"></div>
             </div>
-            <div class="move-history" id="move-history"></div>
+            <div class="buttons">
+                <button onclick="toggleGameMode()" id="game-mode">vs Human</button>
+                <button onclick="undoMove()">Undo</button>
+                <button onclick="redoMove()">Redo</button>
+                <button onclick="newGame()">New Game</button>
+            </div>
         </div>
     </div>
+
+    <audio id="move-sound" src="https://assets.mixkit.co/active_storage/sfx/2853/2853-preview.mp3"></audio>
+    <audio id="capture-sound" src="https://assets.mixkit.co/active_storage/sfx/1451/1451-preview.mp3"></audio>
+
     <script src="script.js"></script>
 </body>
 </html>
