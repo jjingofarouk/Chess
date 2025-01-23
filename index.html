@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.13.4/chess.js"></script>
+</head>
+<body>
+    <div class="chess-container">
+        <div class="chess-board" id="board"></div>
+        <div class="side-panel">
+            <div class="game-info">
+                <div class="clock white-clock">
+                    <span>White: </span>
+                    <span id="white-time">10:00</span>
+                </div>
+                <div class="clock black-clock">
+                    <span>Black: </span>
+                    <span id="black-time">10:00</span>
+                </div>
+                <div class="game-status" id="game-status"></div>
+            </div>
+            <div class="move-history" id="move-history"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
