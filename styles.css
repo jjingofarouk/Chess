@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.chess-container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.chess-board {
+    width: 560px;
+    height: 560px;
+    border: 2px solid #333;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.square {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    cursor: grab;
+    user-select: none;
+}
+
+.square.white {
+    background-color: #f0d9b5;
+}
+
+.square.black {
+    background-color: #b58863;
+}
+
+.square.highlight {
+    background-color: rgba(0, 255, 0, 0.3);
+}
+
+.side-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.game-info {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.clock {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.move-history {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-y: auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.game-status {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+.dragging {
+    opacity: 0.5;
+}
